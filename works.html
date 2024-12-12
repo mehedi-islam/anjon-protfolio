@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Works</title>
+    <style>
+        /* General body and font styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/portfolio-website/img/works.jpg'); /* Background Image */
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333; /* Default text color */
+        }
+
+        /* Card container with background color and shadow */
+        .card {
+            background-color:skyblue; /* Semi-transparent white background */
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Headline and section styling */
+        h1 {
+            color: #000; /* Black color for the heading */
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        /* Button styling */
+        a, button {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Link button styling */
+        a {
+            background-color: #007bff;
+        }
+
+        /* Download button styling */
+        .download-btn {
+            background-color: #28a745;
+        }
+
+        /* Back button styling */
+        .back-btn {
+            background-color: #ff5733;
+        }
+
+        /* Media query for smaller screen sizes */
+        @media (max-width: 768px) {
+            .card {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            a, button {
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>My Works</h1>
+        
+        <!-- Research Paper Link -->
+        <p>
+            <a href="https://www.researchgate.net/publication/380574811_Circulating_vaccine-derived_poliovirus_type_2_outbreak_2024_The_current_public_health_concerns_and_management_strategies" 
+               target="_blank">
+                View Research Paper
+            </a>
+        </p>
+
+        <!-- Project Paper Download Link -->
+        <p>
+            <a href="/portfolio-website/img/Pharmaceutical Evaluation of the Quality Control Parameters of Marketed and Formulated Metformin HCl 500mg Tablet.pdf" 
+               download="Project_Paper" 
+               class="download-btn">
+                Download Project Paper
+            </a>
+        </p>
+
+        <!-- Back Button -->
+        <p>
+            <button onclick="goBack()" class="back-btn">
+                Back
+            </button>
+        </p>
+    </div>
+
+    <!-- JavaScript for Back Button -->
+    <script>
+        function goBack() {
+            if (window.history.length > 1) {
+                window.history.back(); // Navigate to the previous page
+            } else {
+                window.location.href = "index.html"; // Redirect to homepage if no previous page
+            }
+        }
+    </script>
+</body>
+</html>
